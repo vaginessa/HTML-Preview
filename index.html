@@ -20,13 +20,13 @@
 		font-size: 50px;
 	}
 	.words {
-		font-size: 20px;
+		font-size: 22px;
 	}
 	</style>
 
 </head>
 <body>
-	<p class="normal footer" >Developed by <a href="https://github.com/niutech">niu tech</a> | Contribute on <a href="https://github.com/scarrrr316/htmlpreview">GitHub</a><br>Page Styled By <a href="https://tech.hxco.de" target="_blank">Huangxin</a> With <a href="https://template.hxco.org" target="_blank">HXCO General Template</a>
+	<p class="normal footer" >Developed by <a href="https://github.com/niutech">niu tech</a> | Modified by <a href="https://github.com/scarrrr316/">ScarZ</a> | Contribute on <a href="https://github.com/scarrrr316/htmlpreview">GitHub</a><br>Page Styled By <a href="https://tech.hxco.de" target="_blank">Huangxin</a> With <a href="https://github.com/hxco/Template" target="_blank">HXCO General Template</a>
 		<div class="container">
         	<div class="content">
             <form id="previewform" action="" onsubmit="location.href='/htmlpreview/?'+this.file.value;return false">
@@ -39,13 +39,16 @@
                       id="file"
                       value=""
                       placeholder=" https://github.com/user/repo/blob/master/index.html"
-                      size="60"
+                      size="70"
                       autofocus
                       />
                     <input type="submit" value="Preview">
+					<input type = "button" onclick="copyURL()" value="Copy">
                 </div>
             </div>
         </form>
+		<p></p>
+		<p>Or prepend to the URL : scarrrr316.github.io/htmlpreview/?</p>
 	<script src="htmlpreview.js"></script>
 </body>
 </html>
