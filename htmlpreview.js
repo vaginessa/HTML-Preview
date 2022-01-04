@@ -14,7 +14,7 @@
 		for (i = 0; i < frame.length; ++i) {
 			src = frame[i].src; //Get absolute URL
 			if (src.indexOf('//raw.githubusercontent.com') > 0 || src.indexOf('//bitbucket.org') > 0) { //Check if it's from raw.github.com or bitbucket.org
-				frame[i].src = '//' + location.hostname + location.pathname + 'htmlpreview/' + '?' + src; //Then rewrite URL so it can be loaded using CORS proxy
+				frame[i].src = '//' + location.hostname + location.pathname  + '?' + src; //Then rewrite URL so it can be loaded using CORS proxy
 			}
 		}
 		//Links
@@ -24,7 +24,7 @@
 			if (href.indexOf('#') > 0) { //Check if it's an anchor
 				a[i].href = '//' + location.hostname + location.pathname + location.search + '#' + a[i].hash.substring(1); //Then rewrite URL with support for empty anchor
 			} else if ((href.indexOf('//raw.githubusercontent.com') > 0 || href.indexOf('//bitbucket.org') > 0) && (href.indexOf('.html') > 0 || href.indexOf('.htm') > 0)) { //Check if it's from raw.github.com or bitbucket.org and to HTML files
-				a[i].href = '//' + location.hostname + location.pathname + 'htmlpreview/' + '?' + href; //Then rewrite URL so it can be loaded using CORS proxy
+				a[i].href = '//' + location.hostname + location.pathname  + '?' + href; //Then rewrite URL so it can be loaded using CORS proxy
 			}
 		}
 		//Stylesheets
