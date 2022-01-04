@@ -86,7 +86,7 @@
 			document.body.appendChild(script);
 		}
 	};
-	
+
 	var fetchProxy = function (url, options, i) {
 		var proxy = [
 			'', // try without proxy first
@@ -100,6 +100,19 @@
 				throw error;
 			return fetchProxy(url, options, i + 1);
 		})
+	};
+
+	var copyURL = function (data) {
+		/* Get the text field */
+		var copyText = document.getElementById('previewform');
+
+		/* Select the text field */
+		copyText.select();
+		copyText.setSelectionRange(0, 99999); /* For mobile devices */
+		/* Copy the text inside the text field */
+		navigator.clipboard.writeText(copyText.value);
+		/* Alert the copied text */
+		alert("Copied the text: " + copyText.value);
 	};
 
 	if (url && url.indexOf(location.hostname) < 0)
