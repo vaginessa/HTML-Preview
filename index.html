@@ -7,10 +7,15 @@
 <html>
 <head>
 	<title>GitHub & BitBucket HTML Preview</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Keywords" content="GitHub Preview,GitHub HTML Preview,HTML Preview,Free HTML Preview,BitBucket HTML Preview,GitHub Project Preview,HXCO General Template" />
     <meta name="Description" content="GitHub & BitBucket HTML Preview is a free online service that allows you to preview any html files with a simple click!"/>
+	<meta property="og:type" content="website" />
+    <meta property="og:title" content="GitHub & BitBucket HTML Preview" />
+    <meta property="og:description" content="GitHub & BitBucket HTML Preview is a free online service that allows you to preview any html files with a simple click!" />
+    <meta property="og:url" content="scarrrr316.github.io/htmlpreview/?" />
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/picturepan2/spectre@0.5.3/dist/spectre.min.css" integrity="sha256-eBag0DNksOEjebVrDSBxOYWaIsRA5RBzz/PWQtkgmvM=" crossorigin="anonymous">
 	<link href="https://rawcdn.githack.com/hxco/Template/2a7e2daf56335f795a721a290cae3a9e9034f0a5/style.css" rel="stylesheet">
@@ -23,6 +28,14 @@
 		font-size: 22px;
 	}
 	</style>
+	<script type = "text/javascript">
+		var copyURL = function (data) {
+			console.log(data);
+			var url = 'scarrrr316.github.io/htmlpreview/?' + data
+			navigator.clipboard.writeText(url);
+			alert("Copied the text: " + url);
+		};
+		</script>
 
 </head>
 <body>
@@ -43,7 +56,7 @@
                       autofocus
                       />
                     <input type="submit" value="Preview">
-					<input type = "button" onclick="copyURL()" value="Copy">
+					<input type = "button" onclick="copyURL(file.value)" value="Copy">
                 </div>
             </div>
         </form>
