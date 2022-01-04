@@ -1,47 +1,51 @@
+<!--
+    HXCO (https://github.com/hxco/Template) HTML Template
+    HTML file modified from https://github.com/ffork/htmlpreview
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>GitHub &amp; BitBucket HTML Preview</title>
+	<title>GitHub & BitBucket HTML Preview</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="GitHub Preview,GitHub HTML Preview,HTML Preview,Free HTML Preview,BitBucket HTML Preview,GitHub Project Preview,HXCO General Template" />
+    <meta name="Description" content="GitHub & BitBucket HTML Preview is a free online service that allows you to preview any html files with a simple click!"/>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/picturepan2/spectre@0.5.3/dist/spectre.min.css" integrity="sha256-eBag0DNksOEjebVrDSBxOYWaIsRA5RBzz/PWQtkgmvM=" crossorigin="anonymous">
+	<link href="https://rawcdn.githack.com/hxco/Template/2a7e2daf56335f795a721a290cae3a9e9034f0a5/style.css" rel="stylesheet">
+
 	<style>
-	body {
-		font: 12px 'Helvetica Neue', Helvetica, Arial, freesans, clean, sans-serif;
-		color: #333;
+	.title {
+		font-size: 50px;
 	}
-	h1 {
+	.words {
 		font-size: 20px;
 	}
-	a {
-		color: #666;
-	}
-	#previewform {
-		display: none;
-		padding: 20px; 
-		text-align: center;
-	}
-	strong {
-		color: #333;
-		background-color: #FAFFA6;
-		padding: 0.1em;
-	}
-	#footer {
-		margin: 20px 0;
-		font-size: 10px;
-		color: #666;
-	}
 	</style>
+
 </head>
 <body>
-	<form id="previewform" onsubmit="location.href='/htmlpreview/?'+this.file.value;return false">
-		<h1>GitHub &amp; BitBucket HTML Preview</h1>
-		<p>
-			Enter URL of the HTML file to preview:
-			<input type="url" id="file" value="" placeholder="e.g. https://github.com/user/repo/blob/master/index.html" size="60" autofocus>
-			<input type="submit" value="Preview">
-		</p>
-		<p>or prepend to the URL: <code><strong>https://scarrrr316.github.io/htmlpreview/?</strong>https://github.com/twbs/bootstrap/blob/gh-pages/2.3.2/index.html</code></p>
-		<p id="footer">Developed by <a href="https://github.com/niutech">niu tech</a> | Contribute on <a href="https://github.com/scarrrr316/htmlpreview">GitHub</a></p>
-	</form>
+	<p class="normal footer" >Developed by <a href="https://github.com/niutech">niu tech</a> | Contribute on <a href="https://github.com/scarrrr316/htmlpreview">GitHub</a><br>Page Styled By <a href="https://tech.hxco.de" target="_blank">Huangxin</a> With <a href="https://template.hxco.org" target="_blank">HXCO General Template</a>
+	<div class="container">
+        <div class="content">
+            <form id="previewform" action="" onsubmit="location.href='/htmlpreview/?'+this.file.value;return false">
+            <div class="title">GitHub & BitBucket HTML Preview
+                <p></p>
+                <div class="words">Enter URL of the HTML file to preview:<br>
+                    <input
+                      type="url"
+                      id="file"
+                      value=""
+                      placeholder=" https://github.com/user/repo/blob/master/index.html"
+                      size="60"
+                      autofocus
+                      />
+                    <input type="submit" value="Preview">
+                </div>
+            </div>
+        </form>
 	<script src="htmlpreview.js"></script>
 </body>
 </html>
+
