@@ -3,10 +3,11 @@
         console.log('ready');
         const queryString = window.location.search;
         if (!queryString.replace('?', '')) {
-            $(document).load("main.html", function (resp, status, xhr) {
-                if (status == "success" && xhr.status == 200) {
-                    $("load").prepend(resp);
-                }
+            $.get("head.html", function (data) {
+                $("head").append(data);
+            });
+            $.get("body.html", function (data) {
+                $("body").append(data);
             });
         }
     });
