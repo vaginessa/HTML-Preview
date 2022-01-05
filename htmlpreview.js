@@ -102,13 +102,6 @@
 		})
 	};
 
-	var copyURL = function (data) {
-        console.log(data);
-        var url = 'scarrrr316.github.io/htmlpreview/?' + data
-        navigator.clipboard.writeText(url);
-        alert("Copied the text: " + url);
-    };
-
 	if (url && url.indexOf(location.hostname) < 0)
 		fetchProxy(url, null, 0).then(loadHTML).catch(function (error) {
 			console.error(error);
