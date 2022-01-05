@@ -1,7 +1,7 @@
 (function () {
 	
 	var previewForm = document.getElementById('previewform');
-
+	console.log(previewForm);
 	var url = location.search.substring(1).replace(/\/\/github\.com/, '//raw.githubusercontent.com').replace(/\/blob\//, '/'); //Get URL of the raw file
 
 	var replaceAssets = function () {
