@@ -105,10 +105,10 @@
 	if (url && url.indexOf(location.hostname) < 0)
 		fetchProxy(url, null, 0).then(loadHTML).catch(function (error) {
 			console.error(error);
-			previewForm.style.display = 'block';
+			$("#previewForm").hide();
 			previewForm.innerText = error;
 		});
 	else
-		previewForm.style.display = 'block';
+		$("#previewForm").hide();
 
 })()
