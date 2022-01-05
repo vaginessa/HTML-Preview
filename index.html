@@ -1,8 +1,3 @@
-<!--
-    HXCO (https://github.com/hxco/Template) HTML Template
-    HTML file modified from https://github.com/ffork/htmlpreview
--->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,57 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Keywords" content="GitHub Preview,GitHub HTML Preview,HTML Preview,Free HTML Preview,BitBucket HTML Preview,GitHub Project Preview,HXCO General Template" />
     <meta name="Description" content="GitHub & BitBucket HTML Preview is a free online service that allows you to preview any html files with a simple click!"/>
-	<meta property="og:type" content="website" />
-    <meta property="og:title" content="GitHub & BitBucket HTML Preview" />
-    <meta property="og:description" content="GitHub & BitBucket HTML Preview is a free online service that allows you to preview any html files with a simple click!" />
-    <meta property="og:url" content="scarrrr316.github.io/htmlpreview/?" />
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/picturepan2/spectre@0.5.3/dist/spectre.min.css" integrity="sha256-eBag0DNksOEjebVrDSBxOYWaIsRA5RBzz/PWQtkgmvM=" crossorigin="anonymous">
-	<link href="https://rawcdn.githack.com/hxco/Template/2a7e2daf56335f795a721a290cae3a9e9034f0a5/style.css" rel="stylesheet">
-
-	<style>
-	.title {
-		font-size: 50px;
-	}
-	.words {
-		font-size: 22px;
-	}
-	</style>
-	<script type = "text/javascript">
-		var copyURL = function (data) {
-			console.log(data);
-			var url = 'scarrrr316.github.io/htmlpreview/?' + data
-			navigator.clipboard.writeText(url);
-			alert("Copied the text: " + url);
-		};
-		</script>
-
 </head>
 <body>
-	<p class="normal footer" >Developed by <a href="https://github.com/niutech">niu tech</a> | Modified by <a href="https://github.com/scarrrr316/">ScarZ</a> | Contribute on <a href="https://github.com/scarrrr316/htmlpreview">GitHub</a><br>Page Styled By <a href="https://tech.hxco.de" target="_blank">Huangxin</a> With <a href="https://github.com/hxco/Template" target="_blank">HXCO General Template</a>
-		<div class="container">
-        	<div class="content">
-            <form id="previewform" action="" onsubmit="location.href='/htmlpreview/?'+this.file.value;return false">
-            <div class="title">GitHub & BitBucket HTML Preview
-                <p></p>
-                <div class="words">Enter URL of the HTML file to preview:<br>
-					<p></p>
-                    <input
-                      type="url"
-                      id="file"
-                      value=""
-                      placeholder=" https://github.com/user/repo/blob/master/index.html"
-                      size="70"
-                      autofocus
-                      />
-                    <input type="submit" value="Preview">
-					<input type = "button" onclick="copyURL(file.value)" value="Copy">
-                </div>
-            </div>
-        </form>
-		<p></p>
-		<p>Or prepend to the URL : scarrrr316.github.io/htmlpreview/?</p>
-	<script src="htmlpreview.js"></script>
+	<div id="load"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="load.js"></script>
 </body>
 </html>
 
